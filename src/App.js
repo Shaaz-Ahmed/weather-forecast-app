@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect } from "react"; 
 import Card from "./components/Card";
-import Input from "./components/Input";
+import Input from "./components/Input"; 
 import Button from "./components/Button";
 import { useWeather } from "./context/Weather";
 
@@ -9,6 +9,11 @@ import "./App.css";
 function App() {
   const weather = useWeather();
   console.log(weather);
+
+  // Function to refresh the page
+  const refreshPage = () => {
+    window.location.reload();
+  };
 
   useEffect(() => {
     // Get Current Location
@@ -21,7 +26,7 @@ function App() {
       <Input />
       <Button onClick={weather.fetchData} value="Search" />
       <Card />
-      <Button value="Refresh" />
+      <Button value="Refresh" onClick={refreshPage} />
     </div>
   );
 }

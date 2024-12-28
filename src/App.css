@@ -1,7 +1,14 @@
-.App {
-  text-align: center;
-}
 
+.App {
+  margin: 20px;
+  width: 40%;
+  height: 80vh;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-left: 350px;
+  margin-top: 50px;
+  background-image: url('../src/assets/cloud.jpg');
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -38,9 +45,13 @@
 }
 
 .card {
-  padding: 10px;
+  padding: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 60%;
+  margin-left: 80px;
+  height: 40vh;
   border-radius: 20px;
+  background: rgba(135, 206, 235, 0.5); /* Reduced transparency */
 }
 
 .input-field {
@@ -50,11 +61,39 @@
   font-size: 25px;
   margin: 10px;
 }
-
 .btn {
-  border: 0px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  margin: 5px;
+  background-color: #1e90ff; /* A bright blue */
+  border: 2px solid #1e90ff;
+  padding: 5px 15px;
+  border-radius: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
   cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #4682b4; /* Darker blue on hover */
+  transform: translateY(-4px);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.8);
+}
+
+
+.input-field {
+  padding: 10px;
+  font-size: 16px;
+  width: 45%;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.input-field::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* Lighter gray for the placeholder */
 }
